@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+EXEC="$(find -- *.cc* | cut -f 1 -d '.')"
+P1PP="g++ -ansi -O2 -DNDEBUG -D_GLIBCXX_DEBUG -Wall -Wextra -Werror -Wno-sign-compare -Wshadow"
+
+$P1PP -o $EXEC $EXEC.cc
+
+if [ ! -x "$EXEC" ]; then
+  echo 'You have to first compile your code and make it executable to be able to run this script.'
+  exit 1
+fi
+
+for inp in *.inp; do 
+  out=$(./"$EXEC" < "$inp")
+  cor="${inp%.inp}.cor"
+  if [ "$(cat "$cor" )" != "$out" ]; then
+    printf "%s output with %s is: %s\n%s contents are: %s\n\n" "$EXEC" "$inp" "$out" "$cor" "$(cat "$cor")"
+    exit 1
+  elif [ "$1" = '-v' ]; then printf "%s outupt is the same as %s: %s\n" "$EXEC" "$cor" "$out"
+  fi
+done
+
+rm $EXEC
+printf "everything is correct :)\n"
