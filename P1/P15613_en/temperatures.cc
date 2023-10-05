@@ -1,15 +1,16 @@
 #include <iostream>
+using namespace std;
 
 int main() {
   int n;
-  std::cin >> n;
+  cin >> n;
   if (n > 30) { 
-    std::cout << "it's hot" << std::endl;
-    if (n >= 100) std::cout << "water would boil" << std::endl;
+    cout << "it's hot" << endl;
+    if (n >= 100) cout << "water would boil" << endl;
   }
   else if (n < 10) {
-    std::cout << "it's cold" << std::endl;
-    if (n <= 0) std::cout << "water would freeze" << std::endl;
+    cout << "it's cold" << endl;
+    if (n <= 0) cout << "water would freeze" << endl;
   }
-  else std::cout << "it's ok" << std::endl;
+  else cout << "it's ok" << endl;
 }

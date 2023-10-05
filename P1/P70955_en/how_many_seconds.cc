@@ -3,12 +3,13 @@
     Observation: You may assume all years have 365 days. */
 
 #include <iostream>
+using namespace std;
 
 int main() {
   int y, d, h, m, s;
-  std::cin >> y >> d >> h >> m >> s;
+  cin >> y >> d >> h >> m >> s;
   d = d + y * 365;
   h = h + d * 24;
   m = m + h * 60;
-  std::cout << s + m * 60 << std::endl;
+  cout << s + m * 60 << endl;
 }

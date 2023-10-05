@@ -1,12 +1,13 @@
 /* Write a program that reads a letter and prints it in lowercase if it was uppercase, 
  or prints it in uppercase if it was lowercase. */
 #include <iostream>
+using namespace std;
 
 // int main() {
 //   char n;
-//   std::cin >> n;
-//   if (int(n) < 97) std::cout << char(int(n) - int('A') + int('a')) << std::endl;
-//   else std::cout << char(int(n) - int('a') + int('A')) << std::endl;
+//   cin >> n;
+//   if (int(n) < 97) cout << char(int(n) - int('A') + int('a')) << endl;
+//   else cout << char(int(n) - int('a') + int('A')) << endl;
 // }
 
 // When assumming a program uses ascii code (and not unicode or others) we reduce it's program 
@@ -18,7 +19,7 @@
 
 int main() {
   char n;
-  std::cin >> n;
-  if (n < 'a') std::cout << char(n - 'A' + 'a') << std::endl; // <= to also review 'a'
-  else std::cout << char(n - 'a' + 'A') << std::endl;
+  cin >> n;
+  if (n < 'a') cout << char(n - 'A' + 'a') << endl; // <= to also review 'a'
+  else cout << char(n - 'a' + 'A') << endl;
 }
