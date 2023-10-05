@@ -10,12 +10,8 @@ int main() {
   cin >> a >> b;
 
   if (a <= b) {
-    int i = a;
-    cout << i;
-    while (i < b) {
-      ++i;
-      cout << ',' << i;
-    }
+    cout << a;
+    for (int i = a + 1; i <= b; ++i) cout << ',' << i;
   }
   cout << endl;
 }

@@ -20,7 +20,8 @@ int main() {
       double b, h;
       cin >> b >> h;
       cout << b*h << endl;
-    } else if (s == "circle") {
+    }
+    else { // if (s == "circle")
       double r;
       cin >> r;
       cout << r*r*M_PI << endl;

@@ -15,11 +15,11 @@ int main() {
   string type;
   cin >> c >> r >> t >> type;
 
-  double ci = 0;
-  if (type == "simple") ci = 0.01*r*c*t;
-  else if (type == "compound") {
-    for (int i = 1; i <= t; ++i) ci += 0.01*r*(ci + c);
-  }
+  double ci = 0.01*r*c;
+  if (type == "simple") ci *= t;
+  else for (int i = 1; i < t; ++i) {
+    ci += 0.01*r*(ci + c);
+  } //if (type == "compound") {
   cout << c + ci << endl;
 }
 

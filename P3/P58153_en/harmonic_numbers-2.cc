@@ -10,11 +10,11 @@ int main() {
 
   int n, m;
   while (cin >> n >> m) {
-    double hn = 0;
-    double hm = 0;
-    for (int i = 1; i <= n; ++i) hn += 1.0/i;
-    for (int j = 1; j <= m; ++j) hm += 1.0/j;
-
-    cout << hn - hm << endl;
+    double hsubs = 0;
+    for (int i = n; i > m; --i) hsubs += 1.0/i;
+    cout << hsubs << endl;
   }
 }
+
+// execution error: number is too big.
+// solution: H5 - H3 = (1/1 + 1/2 + 1/3 + 1/4 + 1/5) - (1/1 + 1/2 + 1/3) = (1/4 + 1/5)

@@ -13,8 +13,8 @@ int main() {
     int x = 0; // x número de cifras
     int num = n;
     while (num > 0) {
-      x += 1;
       num /= i;
+      ++x;
     }
 
     cout << "Base " << i << ": " << x << " cifras." << endl;

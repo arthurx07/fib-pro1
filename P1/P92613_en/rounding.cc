@@ -1,8 +1,23 @@
 /* Write a program that reads a real number x≥0 and prints ⌊ x ⌋ (the floor of x),
 ⌈ x ⌉ (the ceiling of x), and the rounding of x. */
+
 #include <iostream>
 using namespace std;
 
+int main() {
+  double n;
+  cin >> n;
+
+  int floor = int(n); // 0.5 --> floor to 0
+  int round = int(n + 0.5); // 0.5 + 0.5 --> rounds to 1; 0.3 + 0.5 --> rounds to 0
+  int ceiling;
+  if (floor == n) ceiling = n; // if n is int, ceiling = n
+  else ceiling = floor + 1;
+
+  cout << floor << ' ' << ceiling << ' ' << round << endl;
+}
+
+// prev1: 
 // int main() { // caution: float != double
 //   double n, f, r, c; // n: number, f: floor, c: ceiling, r: closest int
 //   std::cin >> n;
@@ -16,23 +31,10 @@ using namespace std;
 //   std::cout << int(f) << ' ' << int(c) << ' ' << int(r) << std::endl;
 // }
 
-int main() {
-  double n, floor, round, ceiling;
-  cin >> n;
-  floor = int(n);
-  if (floor == n) { ceiling = n; round =n; }
-  else {
-    ceiling = int(n) + 1;
-    if (ceiling - n > n - floor) round = floor;
-    else round = ceiling;
-  }
-  cout << int(floor) << ' ' << int(ceiling) << ' ' << int(round) << endl;
-}
-
-// foor = int(n)
-// if floor == n -> ceiling = n, round = n
+// prev2:
+// if (floor == n) { ceiling = n; round =n; } // for n is int.
 // else {
-//    ceiling = floor + 1
-//    if ( ceiling - n > n - floor ) round = floor
-//    else round = ceiling
+//   ceiling = int(n) + 1;
+//   if (ceiling - n > n - floor) round = floor;
+//   else round = ceiling;
 // }
