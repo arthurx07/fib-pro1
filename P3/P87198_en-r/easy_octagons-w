@@ -1,0 +1,29 @@
+// Input: several natural numbesr n >= 2
+// Output: for every n, print an 'octagon of size n' using capital exes. Do not print any space
+//  to the right of the exes. Print an empty line after each octagon. (view examples)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+
+  while (cin >> n) {
+    int li = 2*(n - 1) + n;
+    for (int i = 0; i < li; ++i) { // n lines
+      if (i < n - 1) {
+        for (int j = n - 1 - i; j > 0; --j) cout << ' '; // n-1-i espais
+        for (int k = n + 2*i; k > 0; --k) cout << 'X'; // n+i X
+      }
+      else if (i >= n - 1 and i < li - n + 1) {
+        for (int j = 2*(n-1) + n; j > 0; --j) cout << 'X'; // n+2 X
+      }
+      else {
+        for (int j = 0; j < i - 2*n + 2; ++j) cout << ' ';
+        //for (int k = n + 2*(-i + n*2 + 2); k > 0; --k) cout << 'X';
+      }
+      cout << endl;
+    }
+    cout << endl;
+  }
+}
