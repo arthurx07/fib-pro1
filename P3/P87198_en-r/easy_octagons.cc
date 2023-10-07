@@ -12,6 +12,7 @@ int main() {
     for (int i = 0; i < 3*n - 2; ++i) { // n - 1 + n + n - 1
       for (int j = 0; j < nblanks; ++j) cout << ' ';
       for (int k = 0; k < ncross; ++k) cout << 'X';
+
       if (i < n - 1) { nblanks -= 1; ncross += 2; } // top
       else if (i >= 2*n - 2) { nblanks += 1; ncross -= 2; }// bot, n - 1 + n = 2*n - 1 (start sum in previous iteration)
       cout << endl;
