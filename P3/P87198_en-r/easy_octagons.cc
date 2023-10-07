@@ -19,3 +19,6 @@ int main() {
   cout << endl;
   }
 }
+
+// ccn 7 vs ccn 5
+// to do: remove those two if, make ncross and nblanks depend on i [?]
