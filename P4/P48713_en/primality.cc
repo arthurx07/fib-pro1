@@ -8,20 +8,24 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
+
   for (int i = 0; i < n; ++i) {
     int m;
     cin >> m;
     
-    bool prime = (m != 1); // 1 is not prime
     int j = 2;
-    // fins √m, o dit d'una altra manera j*j
-    while (prime and j*j <= m) { // search algorithm
-      if (m%j == 0) prime = false;
-      prime = (m%j != 0); // if m%j == 0, n is not prime
+    bool is_prime = (m != 1 and m!= 0); // 1 and 0 are not prime!!
+    while (is_prime and j*j <= m) { // search algorithm
+      // while (j <= √m) == (j*j <= m)
+      is_prime = (m%j != 0); // if m%j == 0, returns false [is not prime]
       ++j;
     }
 
-    if (prime) cout << m << " is prime" << endl;
+    if (is_prime) cout << m << " is prime" << endl;
     else cout << m << " is not prime" << endl;
   }
 }
+
+// a/b = c; a/c = b.
+// Only checking 'b' (which always will be smaller than '√m') is necessary to prove the number is not prime.
+// 'c', which is also a divisor of 'a', doesn't need to be checked; thus reducing times.
