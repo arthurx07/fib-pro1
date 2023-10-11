@@ -6,16 +6,11 @@ using namespace std;
 
 int main() {
   char p;
-  int open = 0;
-  int close = 0;
-  bool last = true;
-  while (cin >> p) {
-    if (p == '(') open += 1;
-    else close +=1;
-
-    if (p == ')') last = true;
-    else last = false;
+  int count = 0; // also can be done with two var, open and close
+  while (count >= 0 and cin >> p) { // search algorithm
+    if (p == '(') count += 1;
+    else count -=1;
   }
-  if (open == close and last) cout << "yes" << endl;
+  if (count == 0) cout << "yes" << endl;
   else cout << "no" << endl;
 }

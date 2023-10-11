@@ -7,11 +7,13 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
+
   int m;
+  int count = 0;
   bool found = false;
-  for (int i = 0; i < n; ++i) {
-    cin >> m;
-    if (i + 1 == n) found = true;
+  while (not found and cin >> m) {
+    ++count;
+    if (count == n) found = true;
   }
   if (found) cout << "At the position " << n << " there is a(n) " << m << '.' << endl;
   else cout << "Incorrect position." << endl;

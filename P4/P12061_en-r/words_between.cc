@@ -11,7 +11,7 @@ int main() {
   bool stop = false;
   int sum = -1; // to not count "end"
   while (cin >> word and not stop) {
-    if (start) sum += 1;
+    if (start) ++sum;
     if (word == "beginning") start = true;
     else if (word == "end") stop = true;
   }

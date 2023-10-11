@@ -6,15 +6,14 @@ using namespace std;
 
 int main() {
   string word, max, max2;
-  cin >> max >> max2;
-  if (max2 > max) {
-    string z = max;
-    max = max2;
-    max2 = z;
-  }
+  cin >> max;
   while (cin >> word) {
-    if (max < word and word != max and word != max2) { max2 = max; max = word;}
-    else if (max2 < word and word != max2 and word != max) max2 = word;
+    if (word > max) {
+      max2 = max;
+      max = word;
+    }
+    else if (word > max2 and word != max) max2 = word;
+      // when max2 is not declared, everything is > than max2
     else if (max == max2) max2 = word;
   }
   cout << max2 << endl;
