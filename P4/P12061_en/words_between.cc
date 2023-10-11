@@ -8,13 +8,13 @@ using namespace std;
 int main() {
   string word;
   bool start = false;
-  bool stop = false;
-  int sum = -1; // to not count "end"
-  while (cin >> word and not stop) {
+  int sum = 0; // to not count "end"
+
+  while (cin >> word and word != "end") {
     if (start) ++sum;
     if (word == "beginning") start = true;
-    else if (word == "end") stop = true;
   }
-  if (start and stop) cout << sum << endl;
+
+  if (start and word == "end") cout << sum << endl;
   else cout << "wrong sequence" << endl;
 }
