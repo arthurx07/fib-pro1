@@ -5,10 +5,8 @@ using namespace std;
 int main() {
   char let;
   int sum = 0;
-  cin >> let;
-  while(let != '.') {
+  while (cin >> let and let != '.') { // search algorithm
     if (let == 'a') sum += 1;
-    cin >> let;
   }
   cout << sum << endl;
 }

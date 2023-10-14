@@ -7,7 +7,7 @@ using namespace std;
 int main() {
   string word, max, max2;
   cin >> max;
-  while (cin >> word) {
+  while (cin >> word) { // treat-all algorithm
     if (word > max) {
       max2 = max;
       max = word;

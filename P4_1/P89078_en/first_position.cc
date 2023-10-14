@@ -7,7 +7,7 @@ int main() {
   int n;
   int pos = 0;
   bool found = false;
-  while (cin >> n and not found) {
+  while (cin >> n and not found) { // search algorithm
     found = n%2 == 0;
     pos += 1;
   }

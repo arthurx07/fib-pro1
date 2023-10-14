@@ -11,7 +11,7 @@ int main() {
   int m;
   int count = 0;
   bool found = false;
-  while (not found and cin >> m) {
+  while (not found and cin >> m) { // search algorithm
     ++count;
     if (count == n) found = true;
   }

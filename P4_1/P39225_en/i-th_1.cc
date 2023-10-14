@@ -8,6 +8,6 @@ int main() {
   int n;
   cin >> n;
   int m;
-  for (int i = 0; i < n; ++i) cin >> m;
+  for (int i = 0; i < n; ++i) cin >> m; // search algorithm
   cout << "At the position " << n << " there is a(n) " << m << '.' << endl;
 }

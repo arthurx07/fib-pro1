@@ -11,7 +11,7 @@ int main() {
   string next;
   int length = 1;
   int longest = 1;
-  while (cin >> next) {
+  while (cin >> next) { // treat-all algorithm
     if (first != next) length = 0;
     else {
       length += 1;

@@ -10,7 +10,7 @@ int main() {
   bool start = false;
   int sum = 0; // to not count "end"
 
-  while (cin >> word and word != "end") {
+  while (cin >> word and word != "end") { // search algorithm
     if (start) ++sum;
     if (word == "beginning") start = true;
   }

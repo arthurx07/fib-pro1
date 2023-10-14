@@ -5,7 +5,7 @@ int main() {
   char let;
   cin >> let;
   bool found = false;
-  while (let != '.' and not found) {
+  while (let != '.' and not found) { // search algorithm
     found = let == 'a';
     cin >> let;
   }

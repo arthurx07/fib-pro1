@@ -8,7 +8,7 @@ int main() {
   char n;
   int lat = 0; // latitude
   int lon = 0; // longitude
-  while (cin >> n) {
+  while (cin >> n) { // treat-all algorithm
     if (n == 's') lat += 1;
     else if (n == 'n') lat -= 1;
     else if (n == 'e') lon += 1;

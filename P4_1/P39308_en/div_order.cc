@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
   int n;
-  while (cin >> n) {
+  while (cin >> n) { // treat-all algorithm
     cout << "divisors of " << n << ":";
 
     // loop for "small" divisors, from 0 to √n

@@ -12,7 +12,7 @@ int main() {
 
   int sum = 0;
   int m = n%1000;
-  while (cin >> n) {
+  while (cin >> n) { // treat-all algorithm
     if (n%1000 == m) {
       cout << n << endl;
       sum += 1;
