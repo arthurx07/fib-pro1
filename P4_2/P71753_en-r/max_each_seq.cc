@@ -8,11 +8,11 @@ using namespace std;
 int main() {
   int n;
   while (cin >> n) { // treat-all sequence
-    int a;
-    if (n > 0) { cin >> a; max = a; }
-    for (int i = 0; i < n; ++i) { // treat-all elements
-      cin >> a;
-      if (a > max) max = a;
+    int x, max;
+    cin >> max;
+    for (int i = 0; i < n - 1; ++i) { // treat-all elements
+      cin >> x;
+      if (x > max) max = x;
     }
     cout << max << endl;
   }
