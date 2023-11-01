@@ -16,19 +16,11 @@ int main() {
     int m, j = 0;
     cin >> m;
     double min = 0, max = 0, avg = 0;
-    bool first = true;
     while (j < m) {
       double x;
       cin >> x;
-      if (first) {
-        min = x;
-        max = x;
-        first = false;
-      }
-      else {
-        if (x < min) min = x;
-        if (x > max) max = x;
-      }
+      if (x < min or j == 0) min = x;
+      if (x > max or j == 0) max = x;
       avg += x;
       ++j;
     }
