@@ -12,7 +12,7 @@ int main() {
   bool incr = false;
   while (not incr and cin >> x) { // search algorithm
     incr = true;
-    if (x > 0) { // if x = 0; do nothing
+    if (x > 0) { // if x = 0; do nothing [condition not strictly necessary]
       string elem, prev;
       cin >> prev;
       for (int j = 1; j < x; ++j) { // search algorithm, but needs to loop through all elements to start
