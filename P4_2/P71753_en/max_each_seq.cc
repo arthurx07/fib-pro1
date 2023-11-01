@@ -12,7 +12,8 @@ int main() {
     cin >> max;
     for (int i = 0; i < n - 1; ++i) { // treat-all elements
       cin >> x;
-      if (x > max) max = x;
+      max += (x - max)*(x > max); // if (x > max) max += (x - max)
+      // if (x > max) max = x;
     }
     cout << max << endl;
   }
