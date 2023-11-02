@@ -7,14 +7,12 @@ int main() {
   char let;
   int count = 0;
   while (cin >> let and let != '.') {
-    if (let > 'A' and let < 'z') {
-      if (let < 'a') { // uppercase
-        for (char i = 'A'; i <= let; ++i) { --count; cout << count << ' ' << i << endl; }
+      if (let >= 'A' and let <= 'Z') { // uppercase
+        for (char i = 'A'; i <= let; ++i) --count;
+	}
+      else if (let >= 'a' and let <= 'z') { // lowercase
+        for (char j = 'z'; j >= let; --j) ++count;
       }
-      else { // lowercase
-        for (char j = 'a'; j <= let; ++j) { ++count; cout << count << ' ' << j << endl; }
-      }
-    }
   }
   cout << count << endl;
 }
