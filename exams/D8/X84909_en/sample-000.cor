@@ -1,0 +1,18 @@
+number of subjects per slot:
+ h    monday   tuesday wednesday  thursday    friday
+ 8         1         1         0         0         0
+ 9         1         2         0         0         0
+10         0         0         0         1         0
+11         0         0         0         2         0
+12         0         0         0         3         0
+13         0         0         0         2         0
+number of teachers per slot:
+ h    monday   tuesday wednesday  thursday    friday
+ 8         1         1         0         0         0
+ 9         1         1         0         0         0
+10         0         0         0         1         0
+11         0         0         0         1         0
+12         0         0         0         2         0
+13         0         0         0         2         0
+number of replacements needed to avoid conflicts:
+3
