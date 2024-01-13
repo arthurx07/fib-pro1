@@ -10,7 +10,7 @@ void infoSequence(int& max, int& lpos) {
   int x;
   int i = 1;
   while (cin >> x and x != 0) {
-    if (x > max) { 
+    if (x >= max) { 
       max = x;
       lpos = i;
     }
@@ -19,5 +19,20 @@ void infoSequence(int& max, int& lpos) {
 }
 
 int main() {
+  int max1 = 1, lpos1;
+  infoSequence(max1, lpos1);
+  cout << max1 << ' ' << lpos1 << ' ';
 
+  int x, i = 1;
+  bool found = false;
+  while (cin >> x and x != 0 and not found) {
+    if (x == max1) {
+      cout << i;
+      found = true;
+    }
+    ++i;
+  }
+
+  if (not found) cout << '-';
+  cout << endl;
 }

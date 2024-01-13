@@ -7,14 +7,24 @@
 using namespace std;
 
 void info_sequence(int& sum, int& last) {
-  int x;
-  while (cin >> x and x != 0) {
-    sum += sum;
-    last = x;
+  int n;
+  while (cin >> n and n != 0) {
+    sum += n;
+    last = n;
   }
 }
 
 int main() {
-  int x;
-  while ()
+  int sum1 = 0, last1 = 0;
+  info_sequence(sum1, last1);
+
+  int n, similar = 1; // including the first one
+  while (cin >> n) {
+    int sum, last;
+    sum = last = n;
+    info_sequence(sum, last);
+
+    if (sum == sum1 and last == last1) ++similar;
+  }
+  cout << similar << endl;
 }

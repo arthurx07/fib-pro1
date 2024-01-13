@@ -13,7 +13,7 @@ using namespace std;
 // post: returns a vector containing the height of all the peaks in v (in the same order)
 vector<int> obtain_peaks(const vector<int>& v) {
   vector<int> w;
-  for (int i = 0; i < v.size() - 1; ++i) {
+  for (int i = 1; i < v.size() - 1; ++i) {
     if (v[i] > v[i+1] and v[i] > v[i-1]) w.push_back(v[i]);
   }
   return w;
@@ -26,25 +26,23 @@ int main() {
   for (int i = 0; i < n; ++i) cin >> v[i];
 
   vector<int> w = obtain_peaks(v);
-  int w_size = w.size();
-  cout << w_size << ":";
-  if (w_size != 0) {
-    for (int i = 0; i < w.size(); ++i) cout << ' ' << w[i];
-  }
+  cout << w.size() << ":";
+  for (int i = 0; i < w.size(); ++i) cout << ' ' << w[i]; //if (w.size() != 0) {
   cout << endl;
 
   bool match = false;
-  if (w_size != 0) {
-    for (int j = 0; j < w.size() - 1; ++j) {
-      if (w[j] > w[w.size() - 1]) {
-        if (match) cout << ' ';
-        cout << w[j];
-        match = true;
-      }
+  for (int j = 0; j + 1 < w.size(); ++j) { // if (w_size != 0) {
+    if (w[j] > w[w.size() - 1]) {
+      if (match) cout << ' ';
+      cout << w[j];
+      match = true;
     }
   }
   if (not match) cout << '-';
   cout << endl;
 }
 
-// problema con v.size() si es 0
+// solve problem when w.size() = 0, in line 34:
+    // if w.size()=0 -> w.size() - 1 is undefined and leads to errors
+    // otherwise, we can do [j < w.size() - 1 <=> j + 1 < w.size()]
+    // then it works, without testing with conditions if w.size() != 0
