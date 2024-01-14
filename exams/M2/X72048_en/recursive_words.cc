@@ -9,7 +9,7 @@ using namespace std;
 void words(int n) {
   // if (n == 0) cout << char(n + '0');
   // else {
-  for (int i = n; i > 0; --i) {
+  for (int i = n; i > 0; --i) { // base case: n = 0, doesn't enter loop
     cout << char(n + '0');
     words(n-1);
   }
